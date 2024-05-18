@@ -70,3 +70,16 @@ let students1:Student[] = [
     return a+b
  }
  tinhTong(1,5);
+ let a1=5;
+ // kiểu dữ liệu any
+ // kiểu dữ liệu number
+ 
+
+
+
+
+
+
+
+
+
