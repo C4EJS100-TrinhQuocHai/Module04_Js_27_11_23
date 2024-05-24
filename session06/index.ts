@@ -24,6 +24,8 @@
       + một lớp abstract khi kế thừa một lớp abstract khác thì không cần thiết phải đi
       implement các phương thức abstract ở trong class đó!
     tính đa hình    : polymorphism
+      đa(nhiều), hình (nhiều hình thái khác nhau): cùng 1 phương thức nhưng khi nhận vào
+      các tham số khác nhau thì sẽ cho ra các kết quả khác nhau.
  */
  abstract class Shape {
     radius:number;
@@ -35,14 +37,12 @@
     }
     abstract getShape():void;
  }
-
  abstract class A{
     abstract getA():void
  }
  abstract class B extends A{
 
  }
-
  class Cricle extends Shape{
     constructor(radius:number){
         super(radius)
@@ -66,5 +66,32 @@
  }
  let square= new Square(4);
  console.log("diện tích của hình vuông là", square.getShape());
+
+ class Polymorphism{
+    name:string;
+    constructor(name:string){
+        this.name=name;
+    }
+    getName():string{
+        return this.name
+    }
+    setName(newName:string){
+        this.name=newName
+    }
+ }
+ let poly= new Polymorphism("nam");
+ console.log("tên là",poly.getName());
+ class Poly extends Polymorphism{
+    constructor(name:string){
+        super(name)
+        this.name=name;
+    }
+ }
+ let poly1= new Poly("hồng");
+ poly1.setName("lan");
+console.log("giá trị mới là", poly1.getName());
+
+
+ 
  
 
