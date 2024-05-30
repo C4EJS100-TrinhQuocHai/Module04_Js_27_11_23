@@ -25,3 +25,8 @@ class Binh {
 }
 let binh = new Binh(1, "binh tommy");
 binh.getProduct();
+class Son {
+    getName() {
+        console.log("hello son!");
+    }
+}
